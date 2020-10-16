@@ -49,7 +49,7 @@ Node* BinaryTree::lowestCommonAncestor(Node* p, Node* q) {
 }
 
 Node* BinaryTree::lowestCommonAncestor(Node* root, Node* p, Node* q) {
-    if (root == NULL || root->val == p->val || root->val == q->val) {
+    if (root == NULL || root == p || root == q) {
         return root;
     }
 
@@ -70,25 +70,17 @@ Node* BinaryTree::lowestCommonAncestor(Node* root, Node* p, Node* q) {
 int main()
 {
     BinaryTree* tree = new BinaryTree(10);
-    tree->root->left = new Node(8);
-    tree->root->right = new Node(12);
-    tree->root->left->left = new Node(6);
-    tree->root->right->right = new Node(14);
-
     Node* p = new Node(8);
     Node* q = new Node(12);
 
+    tree->root->left = p;
+    tree->root->right = q;
+    tree->root->left->left = new Node(6);
+    tree->root->right->right = new Node(14);
+
+    
+
     Node* LCA = tree->lowestCommonAncestor(p,q);
-    std::cout << "hello?\n" << LCA->val;
+    std::cout << LCA->val;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
