@@ -25,13 +25,13 @@ Node* BinaryTree::get(Node *node, int val) {
         return node;
     }
 
-    struct Node* left = get(node->left, val);
+    Node* left = get(node->left, val);
 
     if (left != NULL && left->val == val) {
         return node;
     }
 
-    struct Node* right = get(node->right, val);
+    Node* right = get(node->right, val);
 
     return right;
 }
@@ -41,6 +41,9 @@ bool BinaryTree::isExist(Node* leaf) {
 }
 
 Node* BinaryTree::lowestCommonAncestor(Node* p, Node* q) {
+    if (p == NULL || q == NULL) {
+        return NULL;
+    }
     if (isExist(p) && isExist(q)) {
         return lowestCommonAncestor(this->root, p, q);
     }
@@ -53,8 +56,8 @@ Node* BinaryTree::lowestCommonAncestor(Node* root, Node* p, Node* q) {
         return root;
     }
 
-    struct Node* left = lowestCommonAncestor(root->left, p, q);
-    struct Node* right = lowestCommonAncestor(root->right, p, q);
+    Node* left = lowestCommonAncestor(root->left, p, q);
+    Node* right = lowestCommonAncestor(root->right, p, q);
 
     if (left == NULL) {
         return right;

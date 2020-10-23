@@ -1,16 +1,25 @@
 ﻿  BinaryTreeTest.cpp
-C:\Users\lihang\Desktop\TCD\Year3\BinaryTree\BinaryTree\Node.h(6,15): warning C4099: 'Node': type name first seen using 'class' now seen using 'struct'
-C:\Users\lihang\Desktop\TCD\Year3\BinaryTree\BinaryTree\Node.h(3): message : see declaration of 'Node'
-C:\Users\lihang\Desktop\TCD\Year3\BinaryTree\BinaryTree\BinaryTree.h(7,14): warning C4099: 'Node': type name first seen using 'class' now seen using 'struct'
-C:\Users\lihang\Desktop\TCD\Year3\BinaryTree\BinaryTree\Node.h(3): message : see declaration of 'Node'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(68,81): error C2338: Test writer must define specialization of ToString<Q* q> for your class class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl Microsoft::VisualStudio::CppUnitTestFramework::ToString<class Node>(class Node *).
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(137): message : see reference to function template instantiation 'std::wstring Microsoft::VisualStudio::CppUnitTestFramework::ToString<Node>(Q *)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(137,1): error C2668: 'ToString': ambiguous call to overloaded function
+C:\Users\lihang\Desktop\TCD\Year3\BinaryTree\BinaryTreeTest\BinaryTreeTest.cpp(8,36): message : could be 'std::wstring ToString<Node>(Node *)' [found using argument-dependent lookup]
+          with
+          [
+              Node=Node
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(68,44): message : or       'std::wstring Microsoft::VisualStudio::CppUnitTestFramework::ToString<Node>(Q *)'
           with
           [
               Q=Node
           ]
-C:\Users\lihang\Desktop\TCD\Year3\BinaryTree\BinaryTreeTest\BinaryTreeTest.cpp(28): message : see reference to function template instantiation 'void Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual<Node*>(const T &,const T &,const wchar_t *,const Microsoft::VisualStudio::CppUnitTestFramework::__LineInfo *)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(137,1): message : while trying to match the argument list '(const T)'
           with
           [
               T=Node *
           ]
+C:\Users\lihang\Desktop\TCD\Year3\BinaryTree\BinaryTreeTest\BinaryTreeTest.cpp(64): message : see reference to function template instantiation 'void Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual<Node*>(const T &,const T &,const wchar_t *,const Microsoft::VisualStudio::CppUnitTestFramework::__LineInfo *)' being compiled
+          with
+          [
+              T=Node *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(137,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::GetAssertMessage': no overloaded function takes 2 arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(137,1): error C2660: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::FailOnCondition': function does not take 2 arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(452,53): message : see declaration of 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::FailOnCondition'

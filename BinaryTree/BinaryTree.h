@@ -4,7 +4,7 @@
 
 class BinaryTree {
 	public:
-		struct Node* root;
+		Node* root;
 		BinaryTree();
 		BinaryTree(int val);
 		Node* get(int val);

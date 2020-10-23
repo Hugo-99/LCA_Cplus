@@ -5,7 +5,7 @@
 #include <iostream>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-
+template <class Node> std::wstring ToString(Node*p) { static_assert (std::"oh no it isn't"); }
 namespace BinaryTreeTest
 {
 	TEST_CLASS(BinaryTreeTest)
@@ -60,6 +60,7 @@ namespace BinaryTreeTest
 			tree->root->right->right = new Node(14);
 
 			Node* LCA = tree->lowestCommonAncestor(p, q);
+
 			Assert::AreEqual(LCA, tree->root);
 		}
 
