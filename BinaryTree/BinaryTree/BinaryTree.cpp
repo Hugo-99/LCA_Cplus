@@ -70,6 +70,7 @@ Node* BinaryTree::lowestCommonAncestor(Node* root, Node* p, Node* q) {
     }
 }
 
+/*
 int main()
 {
 
@@ -87,4 +88,4 @@ int main()
     Node* LCA = tree->lowestCommonAncestor(p, q);
     std::cout << LCA->val;
 }
-
+*/

@@ -1,0 +1,5 @@
+﻿  DAGTest.cpp
+C:\Users\lihang\Desktop\TCD\Year3\Software Engineer\BinaryTree\BinaryTree\DAG.cpp(80,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\lihang\Desktop\TCD\Year3\Software Engineer\BinaryTree\BinaryTree\DAG.cpp(80,41): warning C4018: '<': signed/unsigned mismatch
+     Creating library C:\Users\lihang\Desktop\TCD\Year3\Software Engineer\BinaryTree\Debug\DAGTest.lib and object C:\Users\lihang\Desktop\TCD\Year3\Software Engineer\BinaryTree\Debug\DAGTest.exp
+  DAGTest.vcxproj -> C:\Users\lihang\Desktop\TCD\Year3\Software Engineer\BinaryTree\Debug\DAGTest.dll
